@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RhythmX — Smart Fitness Watch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header id="siteHeader">
+  <a href="#" class="logo" aria-label="RhythmX home">
+    <span class="logo-mark" aria-hidden="true">
+      <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 14h4l3-8 4 16 3-10h3l3 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="22" cy="8" r="2.5" fill="currentColor"/>
+      </svg>
+    </span>
+    <span class="logo-text">Rhythm<span class="logo-x">X</span></span>
+  </a>
+  <nav>
+    <a href="#features">Features</a>
+    <a href="#specs">Specs</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#testimonials">Reviews</a>
+  </nav>
+  <div class="header-actions">
+    <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme" title="Theme">
+      <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">◐</span>
+      <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀</span>
+    </button>
+    <a href="#signup" class="nav-cta">Order Now</a>
+  </div>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#features" class="mobile-link">Features</a>
+  <a href="#specs" class="mobile-link">Specs</a>
+  <a href="#pricing" class="mobile-link">Pricing</a>
+  <a href="#testimonials" class="mobile-link">Reviews</a>
+  <a href="#signup" class="nav-cta mobile-link">Order Now</a>
+  <button type="button" class="theme-toggle theme-toggle--mobile" id="themeToggleMobile" aria-label="Toggle light and dark theme">Theme: <span class="theme-toggle__label">Dark</span></button>
+</div>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-mesh" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-copy-panel">
+        <div class="hero-tag">RhythmX · Series R</div>
+        <h1>MOVE<br><span class="hero-line-accent">WITH</span><br><span class="stroke">PRECISION</span></h1>
+        <p class="hero-sub">Train with live vitals, dual-band GPS, and recovery guidance — up to two weeks on a charge. RhythmX keeps the story simple: effort in, clarity out.</p>
+        <div class="hero-actions">
+          <a href="#pricing" class="btn-primary">Shop RhythmX</a>
+          <a href="#features" class="btn-ghost">See what’s inside</a>
+        </div>
+      </div>
+      <div class="hero-stats hero-stats--bar">
+        <div class="hero-stat"><strong>14d</strong><span>Battery</span></div>
+        <div class="hero-stat"><strong>5ATM</strong><span>Water</span></div>
+        <div class="hero-stat"><strong>120+</strong><span>Sport modes</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-visual-frame">
+        <div class="watch-ring" aria-hidden="true"></div>
+        <div class="watch-ring" aria-hidden="true"></div>
+        <div class="watch-ring" aria-hidden="true"></div>
+        <div class="float-badge badge-steps">
+          <span class="icon">🏃</span>
+          <div><strong>6,832</strong><span>Steps today</span></div>
+        </div>
+        <div class="float-badge badge-cal">
+          <span class="icon">🔥</span>
+          <div><strong>544 kcal</strong><span>Burned</span></div>
+        </div>
+
+        <div class="watch-stack">
+      <div class="watch-strap top"></div>
+      <div class="watch-body">
+        <div class="watch-side-btns" aria-hidden="true">
+          <span class="watch-btn watch-btn--a"></span>
+          <span class="watch-btn watch-btn--b"></span>
+        </div>
+        <div class="watch-screen">
+          <div class="watch-brand">RhythmX</div>
+          <div class="watch-time" id="watchTime">09:41</div>
+          <div class="watch-date">WED · MAY 14</div>
+          <div class="watch-face-row">
+            <div class="watch-activity-ring" title="Move goal" aria-hidden="true">
+              <span class="watch-activity-ring-core">78%</span>
+            </div>
+            <div class="watch-metrics">
+              <div class="w-metric">
+                <div class="w-metric-val">♥ 72</div>
+                <div class="w-metric-label">BPM</div>
+              </div>
+              <div class="w-metric">
+                <div class="w-metric-val">98%</div>
+                <div class="w-metric-label">SpO₂</div>
+              </div>
+            </div>
+          </div>
+          <div class="hrm">
+            <svg class="hrm-svg" width="640" height="22" viewBox="0 0 640 22" fill="none" aria-hidden="true">
+              <polyline points="0,11 18,11 26,3 32,19 38,7 44,15 50,11 76,11 84,3 90,19 96,7 102,15 108,11 134,11 142,3 148,19 154,7 160,15 166,11 192,11 200,3 206,19 212,7 218,15 224,11 250,11 258,3 264,19 270,7 276,15 282,11 308,11 316,5 320,11" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.85"/>
+              <polyline transform="translate(320,0)" points="0,11 18,11 26,3 32,19 38,7 44,15 50,11 76,11 84,3 90,19 96,7 102,15 108,11 134,11 142,3 148,19 154,7 160,15 166,11 192,11 200,3 206,19 212,7 218,15 224,11 250,11 258,3 264,19 270,7 276,15 282,11 308,11 316,5 320,11" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.85"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="watch-strap bottom"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURES ── -->
+<section id="features">
+  <div class="features-head">
+    <p class="features-eyebrow">Capability stack</p>
+    <h2 class="features-title">Everything your wrist needs to coach you</h2>
+    <p class="features-lead">Sensors, algorithms, and battery life tuned for real workouts — not demo-day screenshots.</p>
+  </div>
+  <ol class="features-list">
+    <li class="feature-item">
+      <span class="feature-num" aria-hidden="true">01</span>
+      <div class="feature-body">
+        <h3 class="feature-name">Pulse &amp; rhythm tracking</h3>
+        <p>All-day optical heart rate with high-frequency sampling during workouts and gentle checks at rest.</p>
+      </div>
+      <span class="feature-glyph feature-glyph--pulse" aria-hidden="true"></span>
+    </li>
+    <li class="feature-item">
+      <span class="feature-num" aria-hidden="true">02</span>
+      <div class="feature-body">
+        <span class="feature-tag">Coach</span>
+        <h3 class="feature-name">Training load &amp; recovery</h3>
+        <p>Blends sleep debt, HRV trends, and yesterday’s effort so you know when to push or back off.</p>
+      </div>
+      <span class="feature-glyph feature-glyph--wave" aria-hidden="true"></span>
+    </li>
+    <li class="feature-item">
+      <span class="feature-num" aria-hidden="true">03</span>
+      <div class="feature-body">
+        <h3 class="feature-name">Dual-band positioning</h3>
+        <p>L1 + L5 GNSS cuts multipath in cities and keeps trace lines honest on trails and tracks.</p>
+      </div>
+      <span class="feature-glyph feature-glyph--orbit" aria-hidden="true"></span>
+    </li>
+    <li class="feature-item">
+      <span class="feature-num" aria-hidden="true">04</span>
+      <div class="feature-body">
+        <h3 class="feature-name">Blood oxygen on demand</h3>
+        <p>Spot checks and sleep SpO₂ snapshots for altitude trips, illness watch-outs, or peace of mind.</p>
+      </div>
+      <span class="feature-glyph feature-glyph--o2" aria-hidden="true"></span>
+    </li>
+    <li class="feature-item">
+      <span class="feature-num" aria-hidden="true">05</span>
+      <div class="feature-body">
+        <span class="feature-tag feature-tag--new">New</span>
+        <h3 class="feature-name">Hydration &amp; sweat cues</h3>
+        <p>Bioimpedance nudges when you’re trending dry — tuned from session intensity and local heat.</p>
+      </div>
+      <span class="feature-glyph feature-glyph--drop" aria-hidden="true"></span>
+    </li>
+    <li class="feature-item">
+      <span class="feature-num" aria-hidden="true">06</span>
+      <div class="feature-body">
+        <h3 class="feature-name">Two-week endurance</h3>
+        <p>Efficient SoC plus a dense cell pack: long tours, relay weeks, and travel without a charger hunt.</p>
+      </div>
+      <span class="feature-glyph feature-glyph--bolt" aria-hidden="true"></span>
+    </li>
+  </ol>
+</section>
+
+<!-- ── SPECS (accordion) ── -->
+<section id="specs">
+  <div class="specs-head">
+    <p class="specs-eyebrow">Reference sheet</p>
+    <h2 class="specs-title">Numbers worth comparing</h2>
+    <p class="specs-lead">Open each block for the full breakdown — no tab strip, just the facts.</p>
+  </div>
+
+  <div class="specs-board">
+    <details class="spec-drawer" >
+      <summary class="spec-drawer__summary"><span class="spec-drawer__kicker">Wearable</span> Display &amp; chassis</summary>
+      <div class="spec-drawer__body">
+        <div class="spec-matrix">
+          <div class="spec-row"><span class="spec-key">Panel</span><span class="spec-val">1.43″ AMOLED, 466 × 466</span></div>
+          <div class="spec-row"><span class="spec-key">Brightness</span><span class="spec-val">Up to 1500 nits (peak)</span></div>
+          <div class="spec-row"><span class="spec-key">Case</span><span class="spec-val">Fiber-reinforced polymer or Ti (model)</span></div>
+          <div class="spec-row"><span class="spec-key">Lens</span><span class="spec-val">Sapphire (Core / Ultra)</span></div>
+          <div class="spec-row"><span class="spec-key">Mass</span><span class="spec-val">From 44 g (strap excluded)</span></div>
+          <div class="spec-row"><span class="spec-key">Water</span><span class="spec-val">5 ATM swim-ready, IP68 dust/water</span></div>
+        </div>
+      </div>
+    </details>
+    <details class="spec-drawer">
+      <summary class="spec-drawer__summary"><span class="spec-drawer__kicker">Sensing</span> Biometrics &amp; motion</summary>
+      <div class="spec-drawer__body">
+        <ul class="spec-chip-list">
+          <li>Multi-path optical HR</li>
+          <li>SpO₂ &amp; skin temperature</li>
+          <li>ECG-class rhythm capture (Core+)</li>
+          <li>6-axis IMU + barometric altimeter</li>
+          <li>Ambient light for auto dimming</li>
+          <li>EDA / stress proxy signals</li>
+          <li>HRV nightly summaries</li>
+          <li>Compass &amp; magnetometer</li>
+        </ul>
+      </div>
+    </details>
+    <details class="spec-drawer">
+      <summary class="spec-drawer__summary"><span class="spec-drawer__kicker">Wireless</span> Radios &amp; compatibility</summary>
+      <div class="spec-drawer__body">
+        <div class="spec-matrix">
+          <div class="spec-row"><span class="spec-key">GNSS</span><span class="spec-val">L1 / L5 dual-frequency</span></div>
+          <div class="spec-row"><span class="spec-key">Bluetooth</span><span class="spec-val">5.3 (BLE + BR/EDR)</span></div>
+          <div class="spec-row"><span class="spec-key">Wi-Fi</span><span class="spec-val">2.4 GHz 802.11n</span></div>
+          <div class="spec-row"><span class="spec-key">NFC</span><span class="spec-val">Wallet &amp; transit (region)</span></div>
+          <div class="spec-row"><span class="spec-key">Phones</span><span class="spec-val">iOS 16+ · Android 11+</span></div>
+        </div>
+      </div>
+    </details>
+    <details class="spec-drawer">
+      <summary class="spec-drawer__summary"><span class="spec-drawer__kicker">Power</span> Battery &amp; charging</summary>
+      <div class="spec-drawer__body">
+        <div class="spec-matrix">
+          <div class="spec-row"><span class="spec-key">Cell</span><span class="spec-val">Typ. 520–600 mAh by SKU</span></div>
+          <div class="spec-row"><span class="spec-key">Daily mode</span><span class="spec-val">Up to 14 days (AOD off)</span></div>
+          <div class="spec-row"><span class="spec-key">GNSS workout</span><span class="spec-val">Up to 55 h continuous</span></div>
+          <div class="spec-row"><span class="spec-key">Saver loop</span><span class="spec-val">Weeks-long time-only profile</span></div>
+        </div>
+        <div class="battery-bar battery-bar--specs">
+          <div class="bbar-label"><span>Typical week charge</span><span>~82%</span></div>
+          <div class="bbar-track"><div class="bbar-fill bbar-fill--main" style="width:82%;"></div></div>
+        </div>
+        <div class="battery-bar battery-bar--specs">
+          <div class="bbar-label"><span>0→100% magnetic dock</span><span>~88 min</span></div>
+          <div class="bbar-track"><div class="bbar-fill bbar-fill--warm" style="width:48%;"></div></div>
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ── PRICING ── -->
+<section id="pricing">
+  <div class="section-label">Pricing</div>
+  <h2>RHYTHMX SERIES</h2>
+  <div class="pricing-grid">
+    <!-- Go -->
+    <div class="plan-card">
+      <div class="plan-name">RhythmX Go</div>
+      <div class="plan-price">
+        <span class="currency">$</span>
+        <span class="amount">199</span>
+      </div>
+      <div class="plan-sub">One-time purchase</div>
+      <div class="plan-divider"></div>
+      <ul class="plan-features">
+        <li>Continuous HR & SpO₂</li>
+        <li>Single-band GPS</li>
+        <li>7-day battery life</li>
+        <li>Sleep tracking</li>
+        <li>Aluminum case</li>
+        <li>Standard App (free)</li>
+        <li class="cross">ECG & HRV Analysis</li>
+        <li class="cross">Recovery AI Coach</li>
+        <li class="cross">Dual-band GPS</li>
+      </ul>
+      <button class="btn-plan btn-plan-outline" type="button">Choose Go</button>
+    </div>
+
+    <!-- Core — Featured -->
+    <div class="plan-card featured">
+      <span class="plan-featured-badge">Most Popular</span>
+      <div class="plan-name">RhythmX Core</div>
+      <div class="plan-price">
+        <span class="currency">$</span>
+        <span class="amount">349</span>
+      </div>
+      <div class="plan-sub">One-time + $4.99/mo app</div>
+      <div class="plan-divider"></div>
+      <ul class="plan-features">
+        <li>Everything in Go</li>
+        <li>Dual-band L1+L5 GPS</li>
+        <li>14-day battery life</li>
+        <li>ECG & HRV Analysis</li>
+        <li>Titanium case</li>
+        <li>Recovery AI Coach</li>
+        <li>Sapphire crystal glass</li>
+        <li class="cross">Team dashboard</li>
+      </ul>
+      <button class="btn-plan btn-plan-solid" type="button">Choose Core</button>
+    </div>
+
+    <!-- Ultra -->
+    <div class="plan-card">
+      <div class="plan-name">RhythmX Ultra</div>
+      <div class="plan-price">
+        <span class="currency">$</span>
+        <span class="amount">499</span>
+      </div>
+      <div class="plan-sub">One-time + $9.99/mo app</div>
+      <div class="plan-divider"></div>
+      <ul class="plan-features">
+        <li>Everything in Core</li>
+        <li>Team &amp; coach dashboard</li>
+        <li>45-day ultra endurance</li>
+        <li>Priority concierge support</li>
+        <li>Annual health report PDF</li>
+        <li>Custom engraving</li>
+        <li>3-year warranty</li>
+        <li>Early feature access</li>
+      </ul>
+      <button class="btn-plan btn-plan-outline" type="button">Choose Ultra</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section id="testimonials">
+  <div class="testimonials-head">
+    <p class="testimonials-eyebrow">Field notes</p>
+    <h2 class="testimonials-title">What early wearers send back</h2>
+  </div>
+  <div class="testimonials-slider">
+    <div class="testimonials-viewport">
+      <div class="slider-track" id="sliderTrack">
+        <div class="testi-card">
+          <div class="testi-stars" aria-hidden="true">★★★★★</div>
+          <p class="testi-text">“I train athletes on our college ground in the evenings — floodlights or not, the screen is easy to read and I can actually see lap splits while they’re mid-sprint. Big relief compared to my old watch.”</p>
+          <div class="testi-author">
+            <div class="testi-avatar testi-avatar--violet">PS</div>
+            <div>
+              <div class="testi-name">Priya Sharma</div>
+              <div class="testi-role">Athletics coach · Bengaluru</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars" aria-hidden="true">★★★★★</div>
+          <p class="testi-text">“Local train, office, gym, sleep — I’m not charging every other day anymore. Battery honestly lasts the week for me, and I’ve stopped obsessing over the percentage every morning.”</p>
+          <div class="testi-author">
+            <div class="testi-avatar testi-avatar--amber">AM</div>
+            <div>
+              <div class="testi-name">Arjun Mehta</div>
+              <div class="testi-role">UX designer · Mumbai</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars" aria-hidden="true">★★★★☆</div>
+          <p class="testi-text">“Did a monsoon weekend trek near Lonavala — GPS stayed on the trail; my previous watch used to drift into random fields. Only reason it’s not 5 stars is the strap feels half a size big on my wrist.”</p>
+          <div class="testi-author">
+            <div class="testi-avatar testi-avatar--teal">KN</div>
+            <div>
+              <div class="testi-name">Kavita Nair</div>
+              <div class="testi-role">Weekend trail runner · Pune</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars" aria-hidden="true">★★★★★</div>
+          <p class="testi-text">“After my angioplasty, doc asked for regular SpO₂ and heart rate notes during walks. RhythmX’s logs were neat enough that we could share them straight at follow-up — better than juggling a pulse oximeter and a diary.”</p>
+          <div class="testi-author">
+            <div class="testi-avatar testi-avatar--rose">RV</div>
+            <div>
+              <div class="testi-name">Rahul Verma</div>
+              <div class="testi-role">Recovery at home · Delhi NCR</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars" aria-hidden="true">★★★★★</div>
+          <p class="testi-text">“Lap counting in the pool just works. Water lock is simple to find, and exporting session summaries for our club sheet saves me a good few minutes after every practice.”</p>
+          <div class="testi-author">
+            <div class="testi-avatar testi-avatar--violet">NT</div>
+            <div>
+              <div class="testi-name">Neha Thomas</div>
+              <div class="testi-role">Swim coach · Chennai</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slider-controls">
+      <button class="slider-btn" id="prevBtn">←</button>
+      <div class="slider-dots" id="sliderDots"></div>
+      <button class="slider-btn" id="nextBtn">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── SIGNUP ── -->
+<section id="signup">
+  <div class="signup-inner">
+    <div class="section-label" style="justify-content:center;">Stay in the Loop</div>
+    <h2>GET EARLY ACCESS</h2>
+    <p>Join 40,000+ athletes. Be first to know about drops, updates, and exclusive pre-order pricing.</p>
+    <div id="signupFormWrap">
+      <div class="signup-form">
+        <div class="input-wrap">
+          <input type="email" id="emailInput" placeholder="your@email.com" autocomplete="email">
+          <span class="form-error" id="formError">Please enter a valid email address</span>
+        </div>
+        <button type="submit" id="signupBtn">Notify Me</button>
+      </div>
+    </div>
+    <div class="form-success" id="formSuccess">
+      <span>✓</span> You're on the list! We'll be in touch.
+    </div>
+    <p class="signup-fine">No spam. Unsubscribe anytime. Promise.</p>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="#" class="logo logo--footer" aria-label="RhythmX home">
+        <span class="logo-mark" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 14h4l3-8 4 16 3-10h3l3 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="22" cy="8" r="2.5" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="logo-text">Rhythm<span class="logo-x">X</span></span>
+      </a>
+      <p>RhythmX turns heart rate, sleep, and training load into one clear story on your wrist — for athletes and everyday movers alike.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Product</h4>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#specs">Specifications</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#">App Download</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About RhythmX</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Press Kit</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">Warranty</a></li>
+        <li><a href="#">Returns</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 RhythmX Labs. All rights reserved.</p>
+    <div class="footer-socials">
+      <a href="#" class="social-link" title="Twitter">𝕏</a>
+      <a href="#" class="social-link" title="Instagram">IG</a>
+      <a href="#" class="social-link" title="YouTube">YT</a>
+      <a href="#" class="social-link" title="Strava">ST</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
