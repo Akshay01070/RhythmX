@@ -103,7 +103,8 @@ Install the [Live Server](https://marketplace.visualstudio.com/items?itemName=ri
 ### Hero Section
 ![](screenshots/hero.png)
 
-(screenshots/reviews-signup.png)
+###Reviews
+![](screenshots/reviews-signup.png)
 
 ---
 
