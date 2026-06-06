@@ -128,4 +128,3 @@ Install the [Live Server](https://marketplace.visualstudio.com/items?itemName=ri
 
 ---
 
-© 2026 RhythmX Labs. Built with ❤️ using plain HTML, CSS & JavaScript.
